@@ -1,0 +1,38 @@
+<!-- 主页 -->
+<h2>Archive</h2>
+<ul>
+    <% page.posts.each(post=>{ %>
+        <li>
+            <a href="<%=url_for(post.path)%>">
+                <%= post.title %>
+            </a>
+            | <%- date( post.date , 'YYYY/MM/DD HH:mm') %> 
+        </li>
+    <% }) %>
+</ul>
+
+<h3>categories</h3>
+<ul>
+    <% site.categories.each(category=>{ %>
+        <li>
+            <a href="<%- url_for(category.path) %>">
+                <%- category.name  %> 
+            </a>
+        </li>
+    <% }) %>
+</ul>
+
+<h3>tags</h3>
+<ul>
+    <% site.tags.each(tag=>{ %>
+        <li>
+            <a href="<%- url_for(tag.path) %>">
+                <%- tag.name  %> 
+            </a>
+        </li>
+    <% }) %>
+</ul>
+<%- paginator({
+    prev_text: '<',
+    next_text: '>'
+}) %>
