@@ -10,9 +10,16 @@
         <div class="blog-detail__info">
             <span class="bolg_breadcrumb">
                 <div>MaxLeton></div>
-                <div class="blog-tag">博客 </div>
+                    <% page.categories.each(category=>{ %>
+                        <div class="blog-tag" >
+                            <a href="<%- url_for(category.path)  %> ">
+                                <%- category.name  %> 
+                            </a>
+                            
+                        </div>
+                    <% }) %>
             </span>
-            <span><%- date(page.date , 'YYYY/MM/DD HH:mm:ss') %></span>
+            <span><%- date(page.date , 'YYYY/MM/DD') %></span>
         </div>
         
     </div>
