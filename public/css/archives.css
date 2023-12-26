@@ -1,0 +1,428 @@
+/* 把我们所有标签的内外边距清零 */
+* {
+    margin: 0;
+    padding: 0;
+    /* css3盒子模型 */
+    box-sizing: border-box;
+}
+/* em 和 i 斜体的文字不倾斜 */
+em,
+i {
+    font-style: normal
+}
+/* 去掉li 的小圆点 */
+li {
+    list-style: none
+}
+
+img {
+    /* border 0 照顾低版本浏览器 如果 图片外面包含了链接会有边框的问题 */
+    border: 0;
+    /* 取消图片底侧有空白缝隙的问题 */
+    vertical-align: middle
+}
+
+button {
+    /* 当我们鼠标经过button 按钮的时候，鼠标变成小手 */
+    cursor: pointer
+}
+
+a {
+    color: #666;
+    text-decoration: none
+}
+
+a:hover {
+    color: #c81623
+}
+
+button,
+input {
+    /* "\5B8B\4F53" 就是宋体的意思 这样浏览器兼容性比较好 */
+    font-family: Microsoft YaHei, Heiti SC, tahoma, arial, Hiragino Sans GB, "\5B8B\4F53", sans-serif;
+    /* 默认有灰色边框我们需要手动去掉 */
+    border: 0; 
+    outline: none;
+}
+
+body {
+     /* CSS3 抗锯齿形 让文字显示的更加清晰  */
+     -webkit-font-smoothing: antialiased;
+    background-color: #fff;
+    font: 12px/1.5 Microsoft YaHei, Heiti SC, tahoma, arial, Hiragino Sans GB, "\5B8B\4F53", sans-serif;
+    color: #666 ;
+}
+
+.hide,
+.none {
+    display: none
+}
+/* 清除浮动 */
+.clearfix:after {
+    visibility: hidden;
+    clear: both;
+    display: block;
+    content: ".";
+    height: 0
+}
+
+.clearfix {
+    *zoom: 1
+}
+
+/* 实现rem适配  */
+
+/* @media screen and (max-width:1000px) {
+    html {
+        font-size: 42px !important;
+    }
+}
+
+@media screen and (min-width:1800px) {
+    html {
+        font-size:100px !important;
+    }
+};  */
+
+
+/* 头部 */
+.header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 99;
+    width: 100%;
+    height: 67px;
+  
+    background-color: #000;
+    /* position: relative;
+    width: 100%;
+    height: 67px;
+    background-color: black; */
+  }
+  
+  .header-wrap {
+    display: flex;
+    width: 1200px;
+    height: 100%;
+    margin: 0 auto;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  
+  .header_navbar-link {
+    font-size: 16px;
+    color: #787878;
+    width: 100px;
+    height: 30px;
+  
+    border-radius: 15px;
+    text-align: center;
+    line-height: 30px;
+  }
+  
+  .header_navbar-link:hover {
+    font-size: 16px;
+    color: #787878;
+    width: 100px;
+    height: 30px;
+    background-color: aliceblue;
+    border-radius: 15px;
+    text-align: center;
+    line-height: 30px;
+    /* cursor:pointer; */
+  }
+  
+  .header_navbar-links {
+    display: flex;
+    justify-content: space-between;
+    width: 500px;
+    padding-top: 29px;
+    /* margin-left: 350px; */
+  }
+  
+  .header_navbar-links a .active {
+    background-color: aliceblue;
+  }
+  
+  .header-logo {
+    width: 200px;
+    height: 100%;
+  }
+  
+  .header-logo img {
+    width: 150px;
+    height: 100%
+  }
+  
+  .header__navbar-btns {
+    /* background-color:black; */
+    margin-left: 20px;
+    width: 60px;
+    height: 42px;
+    cursor: pointer;
+    margin-top: 1px;
+  
+  }
+  
+  .header__navbar-btns img {
+    width: 30px;
+    height: 30px;
+  }
+  
+  .share__info {
+    margin-top: -10px;
+    margin-left: 20px;
+    width: 60px;
+    height: 60px;
+    cursor: pointer;
+  }
+  
+  .share__info img {
+    width: 45px;
+    height: 45px;
+   
+  }
+  
+  
+  /* dibu  */
+  .footer {
+    width: 100%;
+  
+  }
+  
+  .footer img {
+    width: 100%;
+    height: 400px;
+  }
+
+
+/* 正式代码 */
+.world-box {
+    position: relative;
+    min-height: calc(150vh - 1rem);
+    background: url(../image/archives/bg.jpg) no-repeat center center/cover  ;
+    background-attachment: fixed;
+}
+
+.world-container {
+    position: relative;
+    /* background-image: url(../image/archives/inner2.png);
+    background-repeat: no-repeat;
+    background-size: 50%; */
+    background: url(../image/archives/inner2.png) no-repeat 0 -1rem/4.6rem 6.6rem;
+    overflow: hidden;
+    height: 6.25rem;
+    background-position-y: -1rem;
+}
+
+/* 侧边栏 */
+.world-nav {
+    position: absolute;
+    z-index: 3;
+    top: 0.6rem;
+    left: -6.9rem;
+    width: 9.91rem;
+    height: 7.08rem;
+    padding-top: .38rem;
+    background: url(../image/archives/inner1.png) no-repeat 0 0/85% 65%;
+    line-height: 1;
+    color: #222122;
+    pointer-events: none;
+}
+
+/* 侧栏介绍  */
+.world-inner {
+    position: absolute;
+    right: 0;
+    top: .2rem;
+    width: 3.02rem;
+    padding-left: .1rem;
+    text-align: left;
+    pointer-events: auto;
+}
+
+.world-inner-one {
+    font-size: .25rem;
+    font-family: Impact,"Microsoft YaHei",微软雅黑,"MicrosoftJhengHei",华文细黑,STHeiti,MingLiu,sans-serif;
+    font-weight: 700;
+}
+
+.world-inner-two{
+ margin-top: .05rem;
+ padding-left: .02rem;
+ font-size: .12rem;
+ text-transform: uppercase;
+ font-weight: 700;
+ font-family: Impact,"Microsoft YaHei",微软雅黑,"MicrosoftJhengHei",华文细黑,STHeiti,MingLiu,sans-serif;
+
+}
+
+.world-inner-three {
+    margin-top: .0625rem;
+ font-family: Impact,"Microsoft YaHei",微软雅黑,"MicrosoftJhengHei",华文细黑,STHeiti,MingLiu,sans-serif;
+    font-size: .5rem;
+}
+
+.world-wrap {
+    position: absolute;
+    height: 4.4rem;
+    width: 7.4125rem;
+    overflow: hidden;
+    top: 18%;
+    left:18%;
+}
+
+.world-wrap .world-cd {
+    filter: brightness(25%);
+}
+/* Swiper轮播插件 */
+
+.swiper-container {
+    width: 100%;
+    height: 100%;
+}
+
+.swiper-slide {
+    text-align: center;
+    font-size: 18px;
+
+    /* Center slide text vertically */
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    -webkit-justify-content: center;
+    justify-content: center;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    -webkit-align-items: center;
+    align-items: center;
+    transition: 300ms;
+    transform: scale(0.8);
+}
+
+.swiper-slide-active,
+.swiper-slide-duplicate-active {
+    transform: scale(1);
+}
+
+
+/* 轮播图图片 */
+
+.swiper-slide .world-cd {
+    position: relative;
+    width: 100%;
+    height: 100%;
+}
+
+
+  /* .swiper-slide-active .world-cd {
+    filter: brightness(1);
+} */
+/* hover效果 */
+ .swiper-slide-active .world-cd:hover .cd-top {
+    transform: translateX(-30%);
+
+}
+  .swiper-slide-active .world-cd:hover  .cd-bottom {
+    transform: translateX(30%);
+} 
+.world-wrap  .swiper-slide-active .world-cd{
+    filter: brightness(100%);
+}
+
+ .world-cd  .cd-top{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    transition: transform 0.4s;
+}
+
+.world-cd  .cd-bottom{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    transition: transform 0.4s;
+
+}
+.swiper-slide .world-cd img{
+    width: 100%;
+    height: 100%;
+}
+
+.swiper-slide {
+        border-radius: 10%;
+}
+
+.swiper-slide-active {
+    z-index: 9999;
+}
+.cd-bottom-content {
+    display: inline-block;
+    position: absolute;
+    top: 46%;
+    left: 22%;
+    width: 4.04rem;
+    height: 2.48rem;
+    padding: .15rem;
+    line-height: 1;
+    border-radius: .12rem;
+    color: #000;
+    transform: translate(-50%, -50%) rotate(90deg);
+}
+
+.cd-bottom-content  .font-num {
+    font-family: Impact,"Microsoft YaHei",微软雅黑,"MicrosoftJhengHei",华文细黑,STHeiti,MingLiu,sans-serif;
+
+}
+
+.content-name-one  {
+    font-size: .375rem;
+    text-transform: uppercase
+
+}
+
+
+.content-name-two  {
+    text-align: center;
+    font-size: .1875rem;
+    font-weight: 800;
+    margin-left: 1rem;
+}
+
+
+/* 按钮 */
+.swiper-button-next,
+.swiper-button-prev {
+    width: .375rem !important;
+    height: .94rem;
+    margin-top: -0.97rem;
+    background: url(../image/archives/箭头_b.png) center center/100% 100%;
+    color:rgba(0,0,0,0)!important;
+}
+
+
+.world_navigation .swiper-button-next {
+    right: .0063rem;
+    transform: rotate(180deg);
+}
+
+.world_navigation .swiper-button-prev {
+    left: .0063rem;
+}
+
+
+ .world-footer {
+    position: absolute;
+    right: -8.9rem;
+    bottom: 0;
+    z-index: 1;
+    width: 9.91rem;
+    height: 6.08rem;
+    background: url(../image/archives/inner.png) no-repeat 0 0/100% 103%;
+}
+

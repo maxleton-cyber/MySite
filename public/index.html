@@ -16,14 +16,20 @@
     
 <link rel="stylesheet" href="/css/navbar.css">
  
+    
+<link rel="stylesheet" href="/swiper/swiper-bundle.min.css">
+ 
+    
+<link rel="stylesheet" href="/css/post.css">
+ 
 <meta name="generator" content="Hexo 6.3.0"></head>
     
     <body>
         <nav class="navbar navbar-expand-md navbar-dark bg-dark mb-4 pt-3 pb-3 header">
     <div class="container">
         <div class="header__logo">
-            <img id="smallImg" src="/svg/brand.svg" alt="MaxLeton" width="30" height="30" class="logo-sm rounded-circle border border-3 border-secondary" >
-            <img id="bigImg" src="/svg/brand.svg" alt="MaxLeton" width="80" height="80" class="logo-big rounded-circle border border-4 border-secondary">
+            <img id="smallImg" src="/image/svg/brand.svg" alt="MaxLeton" width="30" height="30" class="logo-sm rounded-circle border border-3 border-secondary" >
+            <img id="bigImg" src="/image/svg/brand.svg" alt="MaxLeton" width="80" height="80" class="logo-big rounded-circle border border-4 border-secondary">
         </div>
         <a id="brand" class="navbar-brand" href="/ ">
             MaxLeton
@@ -61,7 +67,7 @@
     </li>
 
     <li class="nav-item aligncenter">
-        <a class="nav-link header_navbar-link" href="/tag">
+        <a class="nav-link header_navbar-link" href="/categories">
             <i class=" "> </i> 分类
         </a>
     </li>
@@ -86,7 +92,121 @@
     </div>
 </nav>
         <div class="top-container">
-             
+            <div class="all">
+    <div class="one" data-id="1">
+        <div class="bg">
+            <div class="people">
+                <div class="ren">
+                    <img src="../image/character/tp1.png" alt="">
+                </div>
+                <!-- <div class="yuyue">
+                    <a href="#">
+                        <img src="../image/character/tp2.png" alt="">
+                    </a>
+                </div> -->
+                <!-- <div class="lianjie">
+                    <a href="#"><img src="../image/character/tp3.png" alt=""></a>
+                </div> -->
+                <div class="zimu">
+                    <img src="../image/character/tp4.png" alt="">
+                </div>
+                <div class="bgright">
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="two"  data-id="2">
+        <div class="left">
+            <div class="content">
+                <div class="top">角色介绍</div>
+                <div class="center">Character</div>
+                <div class="bottom">02</div>
+            </div>
+        </div>
+        <div class="right">
+            <div class="swiper mySwiper">
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide"><img src="../image/character/tp20.png" alt=""></div>
+                    <div class="swiper-slide"><img src="../image/character/tp22.png" alt=""></div>
+                    <div class="swiper-slide"><img src="../image/character/tp24.png" alt=""></div>
+                    <div class="swiper-slide"><img src="../image/character/tp26.png" alt=""></div>
+                    <div class="swiper-slide"><img src="../image/character/tp28.png" alt=""></div>
+                    <div class="swiper-slide"><img src="../image/character/tp30.png" alt=""></div>
+                    <div class="swiper-slide"><img src="../image/character/tp32.png" alt=""></div>
+                    <div class="swiper-slide"><img src="../image/character/tp34.png" alt=""></div>
+                    <div class="swiper-slide"><img src="../image/character/tp36.png" alt=""></div>
+                </div>
+                <div class="swiper-button-next"></div>
+                <div class="swiper-button-prev"></div>
+                <div class="swiper-pagination"></div>
+            </div>
+        </div>
+    </div>
+    <div class="five" data-id="3">
+        <div class="home_five">
+            <div class="home_five_one">
+                <img src="../image/character/tp777777.gif" alt="">
+            </div>
+            <div class="home_five_two">
+                <img src="../image/character/tp75.png" alt="">
+            </div>
+            <div class="home_five_three">
+                <ul>
+                    <li class="ziti1">设定档案</li>
+                    <li class="ziti2">BACKGROUND</li>
+                    <li class="ziti3">03</li>
+                </ul>
+            </div>
+            <div class="home_five_four">
+                <i><img src="../image/character/tp83.png" alt=""></i>
+            </div>
+            <div class="home_five_five">
+                <img src="" alt="">
+            </div>
+        </div>
+    </div>
+    <aside class="sidebar">
+        <div class="sidebar_nav">
+            <div class="sidebar_nav-prev disable"></div>
+            <div class="sidebar_nav-next"></div>
+        </div>
+        <div class="sidebar_scroll">
+            <ul class="sidebar_pagers" style="transform: translateY(-8.48rem);">
+                <li class="sidebar_pagers-num font-numsidebar_pager s-num--active"></li>
+                <li class="sidebar_pagers-num-two font-num"></li>
+                <li class="sidebar_pagers-num-three font-num"></li>
+                <!-- <li class="sidebar_pagers-num font-num">04</li>
+        <li class="sidebar_pagers-num font-num">05</li> -->
+            </ul>
+
+        </div>
+    </aside>
+
+
+
+        
+    <script src="../js/index.js"></script>
+    <script src="../swiper/swiper-bundle.min.js"></script>
+    <script>
+     var swiper = new Swiper(".mySwiper", {
+        pagination: {
+        el: ".swiper-pagination",
+        type: "fraction",
+        },
+        navigation: {
+        nextEl: ".swiper-button-next",
+        prevEl: ".swiper-button-prev",
+        },
+    });
+        var mySwiper = new Swiper('.swiper', {
+        // loop: true,
+        autoplay: true,
+    });
+    
+
+     </script>
+</div> 
         </div>
     </body>
 

@@ -7,7 +7,7 @@ title: MaxLeton
 subtitle: ''
 description: ''
 keywords:
-author: John Doe
+author: MaxLeton
 language: en
 timezone: ''
 
@@ -67,9 +67,9 @@ index_generator:
   order_by: -date
 
 # Category & Tag
-default_category: uncategorized
-category_map:
-tag_map:
+default_category: categories
+category_map: categories
+tag_map: tags
 
 # Metadata elements
 ## https://developer.mozilla.org/en-US/docs/Web/HTML/Element/meta

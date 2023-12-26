@@ -1,5 +1,5 @@
 <nav class="navbar navbar-expand-md navbar-dark bg-dark mb-4 pt-3 pb-3 header">
-    <div class="container">
+    <div class="container  container-width">
         <div class="header__logo">
             <img id="smallImg" src="<%- url_for('/image/svg/brand.svg') %>" alt="MaxLeton" width="30" height="30" class="logo-sm rounded-circle border border-3 border-secondary" >
             <img id="bigImg" src="<%- url_for('/image/svg/brand.svg') %>" alt="MaxLeton" width="80" height="80" class="logo-big rounded-circle border border-4 border-secondary">
@@ -7,10 +7,6 @@
         <a id="brand" class="navbar-brand" href="<%- url_for(config.index_generator.path) %> ">
             <%- config.title %>
         </a>
-        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse"
-                aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-        </button>
 
         <div class="collapse navbar-collapse justify-content-end" id="navbarCollapse">
 

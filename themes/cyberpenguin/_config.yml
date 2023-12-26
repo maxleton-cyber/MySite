@@ -16,7 +16,9 @@ menu_right:
   - title: 博客
     path: '/archives'
   - title: 分类
-    path: '/tag'
+    path: '/categories'
+  - title: 标签
+    path: '/tags'
   - title: 关于
     path: /about
 

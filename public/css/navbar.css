@@ -5,6 +5,7 @@
   width: 100%;
   background-color: #000 !important;
   position: fixed;
+  z-index: 20;
 }
 
 .header_navbar-link {
